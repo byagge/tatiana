@@ -1,0 +1,73 @@
+{
+  "events": [
+    {
+      "id": "fb2edbaa-c275-4969-ae58-c1f9ea1952f1",
+      "title": "Группа «Треугольник власти»",
+      "description": "Однодневная группа: роли, вторичные выгоды и выход в реальную жизнь — не «в теории из интернета».",
+      "dateIso": "2026-08-16T18:00:00Z",
+      "priceRub": 4500,
+      "seatsTotal": 12,
+      "seatsTaken": 0,
+      "status": "past",
+      "imageUrl": null,
+      "createdAt": "2026-08-02T08:00:47.233799Z",
+      "updatedAt": "2026-08-11T08:01:21.783715+00:00"
+    },
+    {
+      "id": "28145884-2f1c-4d31-9cb3-210235f3fc7b",
+      "title": "Вечер ресурсной группы",
+      "description": "Закрытая встреча для тех, кто уже в терапии или готов к бережной групповой работе.",
+      "dateIso": "2026-09-01T11:00:00Z",
+      "priceRub": 3000,
+      "seatsTotal": 10,
+      "seatsTaken": 0,
+      "status": "upcoming",
+      "imageUrl": null,
+      "createdAt": "2026-08-02T08:00:47.233799Z",
+      "updatedAt": "2026-08-02T08:00:47.233799Z"
+    },
+    {
+      "id": "54a37db6-c374-4765-937d-8609edcb0690",
+      "title": "Интенсив по границам",
+      "description": "Прошедшее мероприятие: работа с личными границами и коммуникацией.",
+      "dateIso": "2026-07-12T18:00:00Z",
+      "priceRub": 4000,
+      "seatsTotal": 14,
+      "seatsTaken": 0,
+      "status": "past",
+      "imageUrl": null,
+      "createdAt": "2026-08-02T08:00:47.233799Z",
+      "updatedAt": "2026-08-02T08:00:47.233799Z"
+    }
+  ],
+  "bookings": [],
+  "payments": [],
+  "leads": [
+    {
+      "id": "fbfede7a-9410-40db-b860-37aa189f484a",
+      "source": "bot",
+      "serviceId": "personal",
+      "eventId": null,
+      "name": ".",
+      "phone": ".",
+      "comment": null,
+      "status": "new",
+      "tgUserId": 2042724515,
+      "tgUsername": "thatarix",
+      "createdAt": "2026-08-11T07:44:20.913173+00:00"
+    },
+    {
+      "id": "75107f8f-763c-43f3-a558-b6bffa3f7742",
+      "source": "bot",
+      "serviceId": "personal",
+      "eventId": null,
+      "name": "Андрей",
+      "phone": "+7 927 000-00-00",
+      "comment": null,
+      "status": "cancelled",
+      "tgUserId": 2042724515,
+      "tgUsername": "thatarix",
+      "createdAt": "2026-08-11T07:58:35.947440+00:00"
+    }
+  ]
+}

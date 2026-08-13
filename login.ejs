@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<%- include('partials/otoplaza/head') %>
+<body class="wp-singular wp-theme-hello-elementor theme-hello-elementor woocommerce-js elementor-default elementor-kit-15">
+<%- include('partials/otoplaza/header') %>
+<section class="ad-page-section">
+  <div class="ad-page-inner" style="max-width:480px;margin:0 auto">
+    <h1 class="ad-page-title" style="text-align:center">Вход</h1>
+    <p style="text-align:center;color:#707980;margin:-8px 0 24px">Войдите по номеру телефона</p>
+    <% if (error) { %><div class="ad-error"><%= error %></div><% } %>
+    <form class="ad-vehicle-panel" method="post" action="/login" style="max-width:none">
+      <div class="ad-field">
+        <label>Телефон</label>
+        <input name="phone" type="tel" placeholder="+79001234567" required/>
+      </div>
+      <div class="ad-field">
+        <label>Пароль</label>
+        <input name="password" type="password" required/>
+      </div>
+      <button class="ad-btn ad-btn--dark ad-btn--block" type="submit">Войти</button>
+    </form>
+    <p style="text-align:center;margin-top:18px">Нет аккаунта? <a href="/register" style="color:var(--ad-accent);font-weight:700">Зарегистрироваться</a></p>
+    <p style="text-align:center;font-size:12px;color:#9098a0">Демо: +79001234567 / password123</p>
+  </div>
+</section>
+<%- include('partials/otoplaza/footer') %>
+<%- include('partials/otoplaza/scripts') %>
+</body>
+</html>

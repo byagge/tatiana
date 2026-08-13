@@ -1,0 +1,23 @@
+{
+  "name": "tatiana-kanunnikova",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev:web",
+    "dev:web": "npm run dev -w @tatiana/web",
+    "dev:bot": "npm run dev:bot:py",
+    "dev:bot:py": "python -m pip install -q -r apps/bot_py/requirements.txt && python -m uvicorn app.main:app --app-dir apps/bot_py --host 0.0.0.0 --port 3001",
+    "dev:bot:node": "npm run dev -w @tatiana/bot",
+    "build": "npm run build -w @tatiana/shared && npm run build -w @tatiana/web && npm run build -w @tatiana/bot",
+    "seed": "npm run seed -w @tatiana/shared",
+    "start:bot": "python -m uvicorn app.main:app --app-dir apps/bot_py --host 0.0.0.0 --port 3001",
+    "start:web": "npm run preview -w @tatiana/web",
+    "smoke": "node scripts/smoke.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
