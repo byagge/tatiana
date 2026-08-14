@@ -51,10 +51,24 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+*::-webkit-scrollbar,
+*::-webkit-scrollbar-button,
+*::-webkit-scrollbar-thumb,
+*::-webkit-scrollbar-track {
+  display: none;
+  width: 0;
+  height: 0;
 }
 
 html {
   scroll-behavior: smooth;
+  max-width: 100%;
+  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 body {
@@ -65,9 +79,20 @@ body {
   background: var(--bg);
   line-height: 1.55;
   -webkit-font-smoothing: antialiased;
+  max-width: 100%;
+  overflow-x: hidden;
+  overflow-x: clip;
 }
 
-img {
+#root {
+  max-width: 100%;
+  overflow-x: hidden;
+  overflow-x: clip;
+}
+
+img,
+video,
+iframe {
   max-width: 100%;
   display: block;
 }
@@ -84,6 +109,7 @@ input {
 
 .container {
   width: min(100% - 2.5rem, var(--container));
+  max-width: 100%;
   margin-inline: auto;
 }
 
@@ -214,6 +240,7 @@ h3 {
   justify-content: space-between;
   gap: 1rem;
   min-height: 4.25rem;
+  min-width: 0;
 }
 
 .brand {
@@ -285,6 +312,7 @@ h3 {
   grid-template-columns: 1.05fr 0.95fr;
   gap: 3rem;
   align-items: center;
+  min-width: 0;
 }
 
 .hero__copy h1 {
@@ -327,6 +355,7 @@ h3 {
 
 .hero__media {
   position: relative;
+  min-width: 0;
 }
 
 .hero__photo {
@@ -345,7 +374,7 @@ h3 {
 
 .hero__badge {
   position: absolute;
-  right: -0.5rem;
+  right: 0.75rem;
   bottom: 12%;
   max-width: 220px;
   padding: 1rem 1.1rem;
@@ -1028,6 +1057,28 @@ h3 {
   object-fit: cover;
   width: 100%;
   height: 100%;
+}
+
+.hero__grid,
+.about,
+.feature,
+.product,
+.cta,
+.footer__grid,
+.cards,
+.steps,
+.event-grid,
+.usp__row {
+  min-width: 0;
+}
+
+.hero__grid > *,
+.about > *,
+.feature > *,
+.product > *,
+.cta > *,
+.footer__grid > * {
+  min-width: 0;
 }
 
 @media (max-width: 980px) {
