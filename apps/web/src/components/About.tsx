@@ -6,7 +6,7 @@ export function About() {
       <div className="container about">
         <div className="about__photo">
           <img
-            src="/images/page8_X1_1001x1201.jpg"
+            src="/images/tatiana-portrait.png"
             alt="Портрет Татьяны Канунниковой"
           />
         </div>

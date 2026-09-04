@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { SERVICES } from "../lib/content";
+import { SERVICES, formatPriceRub } from "../lib/content";
 
 export function Services() {
   return (
@@ -31,6 +31,9 @@ export function Services() {
               </div>
               <div className="card__body">
                 <h3>{s.title}</h3>
+                <p className="card__price">
+                  {formatPriceRub(s.priceRub, "priceFrom" in s && s.priceFrom)}
+                </p>
                 <p>{s.description}</p>
                 <a className="card__link" href="#booking">
                   Подробнее →

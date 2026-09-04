@@ -41,7 +41,7 @@ export function Footer() {
           <div>
             <h3>Галерея</h3>
             <div className="gallery">
-              <img src="/images/page8_X1_1001x1201.jpg" alt="Татьяна Канунникова" />
+              <img src="/images/tatiana-portrait.png" alt="Татьяна Канунникова" />
               <img src="/images/service-personal.png" alt="Личная консультация" />
               <img src="/images/service-support.png" alt="Поддержка" />
               <img src="/images/service-supervision.png" alt="Супервизия" />

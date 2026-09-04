@@ -13,7 +13,8 @@ const root = path.resolve(
 );
 
 const BANNER_CANDIDATES = [
-  path.join(root, "apps/web/public/images/page8_X1_1001x1201.jpg"),
+  path.join(root, "apps/web/public/images/services-prices.png"),
+  path.join(root, "apps/web/public/images/tatiana-portrait.png"),
   path.join(root, "apps/web/public/logos/sign-white.png"),
   path.join(root, "apps/bot/assets/banner.jpg"),
 ];

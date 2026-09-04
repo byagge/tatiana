@@ -6,7 +6,7 @@ from aiogram.fsm.context import FSMContext
 from aiogram.types import CallbackQuery, Message
 
 from app.config import settings
-from app.content import SERVICES, service_by_id
+from app.content import SERVICES, format_price, service_by_id
 from app.emoji import (
     CAL,
     CANDLE,
@@ -146,7 +146,7 @@ async def lead_pick(cq: CallbackQuery, state: FSMContext) -> None:
     await state.update_data(service_id=sid)
     text = (
         f"{SPARK} <b>{service['title']}</b>\n"
-        f"{DIAMOND} {service['price']:,} ₽\n\n"
+        f"{DIAMOND} {format_price(service)}\n\n"
         f"{service['description']}\n\n"
         "Как вас зовут?"
     ).replace(",", " ")

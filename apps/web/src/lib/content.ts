@@ -15,15 +15,15 @@ export const SERVICES = [
     title: "Личная консультация",
     description:
       "Индивидуальная онлайн или офлайн-сессия. Разбираем ваш запрос грамотно и бережно.",
-    priceRub: 5000,
+    priceRub: 6000,
     image: "/images/service-personal.png",
   },
   {
     id: "group",
-    title: "Групповая терапия",
+    title: "Групповые",
     description:
       "Закрытые группы и тематические встречи. Запись и оплата через Telegram-бота.",
-    priceRub: 3500,
+    priceRub: 3000,
     image: "/images/service-support.png",
   },
   {
@@ -31,7 +31,7 @@ export const SERVICES = [
     title: "Супервизия",
     description:
       "Супервизия для специалистов: поддержка практики и профессиональный взгляд со стороны.",
-    priceRub: 6000,
+    priceRub: 3000,
     image: "/images/service-supervision.png",
   },
   {
@@ -39,10 +39,19 @@ export const SERVICES = [
     title: "Видео-курсы",
     description:
       "Готовые материалы для самостоятельной работы в удобном темпе.",
-    priceRub: 7900,
+    priceRub: 3000,
+    priceFrom: true,
     image: "/images/service-workshop.png",
   },
 ] as const;
+
+export function formatPriceRub(
+  priceRub: number,
+  priceFrom = false
+): string {
+  const formatted = priceRub.toLocaleString("ru-RU");
+  return priceFrom ? `от ${formatted} ₽` : `${formatted} ₽`;
+}
 
 export const CONTACT = {
   name: "Татьяна Канунникова",

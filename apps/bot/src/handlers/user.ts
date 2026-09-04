@@ -3,6 +3,7 @@ import type { Context, SessionFlavor } from "grammy";
 import {
   SERVICES,
   CONTACT,
+  formatPriceRub,
   type Store,
   type PaymentProvider,
   type DikidiClient,
@@ -150,7 +151,7 @@ export function registerUserHandlers(
       ctx,
       [
         `${e("sparkles", "✨")} <b>${service.title}</b>`,
-        `${e("diamond", "💎")} ${service.priceRub.toLocaleString("ru-RU")} ₽`,
+        `${e("diamond", "💎")} ${formatPriceRub(service.priceRub, "priceFrom" in service && service.priceFrom)}`,
         "",
         service.description,
         "",

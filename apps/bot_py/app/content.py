@@ -3,25 +3,26 @@ SERVICES = [
         "id": "personal",
         "title": "Личная консультация",
         "description": "Индивидуальная онлайн или офлайн-сессия. Разбираем ваш запрос грамотно и бережно.",
-        "price": 5000,
+        "price": 6000,
     },
     {
         "id": "group",
-        "title": "Групповая терапия",
+        "title": "Групповые",
         "description": "Закрытые группы и тематические встречи. Запись через бота.",
-        "price": 3500,
+        "price": 3000,
     },
     {
         "id": "supervision",
         "title": "Супервизия",
         "description": "Супервизия для специалистов: поддержка практики и взгляд со стороны.",
-        "price": 6000,
+        "price": 3000,
     },
     {
         "id": "course",
         "title": "Видео-курсы",
         "description": "Готовые материалы для самостоятельной работы в удобном темпе.",
-        "price": 7900,
+        "price": 3000,
+        "price_from": True,
     },
 ]
 
@@ -39,6 +40,13 @@ ABOUT = (
     "Психолог, психотерапевт и супервизор. Работаю бережно и по делу — "
     "индивидуально, в группе и через готовые материалы."
 )
+
+
+def format_price(service: dict) -> str:
+    amount = f"{service['price']:,}".replace(",", " ")
+    if service.get("price_from"):
+        return f"от {amount} ₽"
+    return f"{amount} ₽"
 
 
 def service_by_id(sid: str) -> dict | None:

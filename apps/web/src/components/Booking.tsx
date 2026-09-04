@@ -1,11 +1,11 @@
 import { useMemo, useState } from "react";
-import { SERVICES } from "../lib/content";
+import { SERVICES, formatPriceRub } from "../lib/content";
 import { useModals } from "../lib/modals";
 
 const slides = [
-  "/images/page8_X1_1001x1201.jpg",
+  "/images/tatiana-portrait.png",
+  "/images/services-prices.png",
   "/images/page10_X1_4096x3072.jpg",
-  "/images/service-consultation.png",
 ];
 
 export function Booking() {
@@ -71,7 +71,7 @@ export function Booking() {
           <h3>{service.title}</h3>
           <p className="lead">{service.description}</p>
           <div className="price">
-            {service.priceRub.toLocaleString("ru-RU")} ₽
+            {formatPriceRub(service.priceRub, "priceFrom" in service && service.priceFrom)}
           </div>
 
           <div className="btn-row">
